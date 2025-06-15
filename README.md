@@ -1,4 +1,4 @@
-# 🚀 MAS Hub - Enterprise Smart Contract Platform
+# 🚀 MAS Hub - modular SaaS platform for enterprises Web3 adoption seamless
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-repo/mas-hub)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
