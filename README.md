@@ -12,16 +12,15 @@ MAS Hub is a comprehensive enterprise-grade platform that bridges traditional bu
 
 ### Architecture Overview
 
-\`\`\`mermaid
-graph TD
-    A[Next.js Frontend] --> B[API Layer]
+```
+    A[Frontend] --> B[API Layer]
     B --> C[Supabase Database]
     B --> D[MasChain Smart Contracts]
     D --> E[Blockchain Network]
     C --> F[Real-time Notifications]
     B --> G[Compliance Engine]
     G --> H[Audit Trail]
-\`\`\`
+```
 
 ### 🌟 Key Features
 
@@ -36,11 +35,11 @@ graph TD
 
 **NEW!** We've packaged our core functionality into a developer-friendly SDK for easy integration:
 
-\`\`\`bash
+```bash
 npm install @mashub/sdk
-\`\`\`
+```
 
-\`\`\`typescript
+```typescript
 import { MasHubSDK } from '@mashub/sdk'
 
 const masHub = new MasHubSDK({
@@ -66,7 +65,7 @@ const kycResult = await masHub.compliance.performKYC({
   wallet_address: '0x...',
   user_id: 'user_123'
 })
-\`\`\`
+```
 
 **[📚 Full SDK Documentation](./packages/mashub-sdk/README.md)**
 
@@ -81,7 +80,7 @@ const kycResult = await masHub.compliance.performKYC({
 
 ### Installation
 
-\`\`\`bash
+```bash
 # Clone the repository
 git clone https://github.com/Mas-hub-chain/mas-hub.git
 cd mas-hub
@@ -91,13 +90,13 @@ pnpm install
 
 # Copy environment template
 cp .env.example .env.local
-\`\`\`
+```
 
 ### Environment Configuration
 
-Create \`.env.local\` with the following variables:
+Create `.env.local` with the following variables:
 
-\`\`\`env
+```env
 # Next.js Configuration
 NODE_ENV=development
 NEXTAUTH_URL=http://localhost:3000
@@ -118,7 +117,7 @@ MASCHAIN_MOCK_MODE=false
 # Security
 CSRF_SECRET=your_csrf_secret
 MASCHAIN_WEBHOOK_SECRET=your_webhook_secret
-\`\`\`
+```
 
 ### Database Setup
 
@@ -126,7 +125,7 @@ MASCHAIN_WEBHOOK_SECRET=your_webhook_secret
 
 2. **Run Database Migrations**: Execute the SQL scripts in order:
 
-\`\`\`bash
+```bash
 # Run in Supabase SQL Editor
 scripts/001-initial-schema.sql
 scripts/002-auth-profiles.sql  
@@ -134,11 +133,11 @@ scripts/003-audit-and-profiles.sql
 scripts/005-phase4-advanced-features.sql
 scripts/006-smart-contracts-schema.sql
 scripts/007-fix-notifications-table.sql
-\`\`\`
+```
 
 ### Running the Application
 
-\`\`\`bash
+```bash
 # Development mode
 pnpm dev
 
@@ -151,7 +150,7 @@ pnpm test
 
 # Run with Docker
 docker-compose up
-\`\`\`
+```
 
 Visit [http://localhost:3000](http://localhost:3000) to see the application.
 
@@ -159,7 +158,7 @@ Visit [http://localhost:3000](http://localhost:3000) to see the application.
 
 ### Option 1: Using MAS Hub SDK (Recommended)
 
-\`\`\`typescript
+```typescript
 import { MasHubSDK } from '@mashub/sdk'
 
 const masHub = new MasHubSDK({
@@ -209,11 +208,11 @@ const analytics = await masHub.analytics.getOverview({
   timeframe: '30d',
   metrics: ['transactions', 'volume', 'users']
 })
-\`\`\`
+```
 
 ### Option 2: Direct API Integration
 
-\`\`\`typescript
+```typescript
 import { masChainSmartContracts } from '@/lib/maschain/smart-contracts'
 
 // Create a new smart contract project
@@ -236,13 +235,13 @@ const deployment = await masChainSmartContracts.deployContract({
     order: 1
   }]
 })
-\`\`\`
+```
 
 ## 🛠️ SDK Development
 
 ### Building the SDK
 
-\`\`\`bash
+```bash
 # Navigate to SDK directory
 cd packages/mashub-sdk
 
@@ -257,17 +256,17 @@ npm test
 
 # Link for local development
 npm link
-\`\`\`
+```
 
 ### Using SDK in Development
 
-\`\`\`bash
+```bash
 # In your project directory
 npm link @mashub/sdk
 
 # Now you can import and use the SDK
 import { MasHubSDK } from '@mashub/sdk'
-\`\`\`
+```
 
 ### SDK Examples
 
@@ -283,7 +282,7 @@ Check out comprehensive examples in the [`packages/mashub-sdk/examples/`](./pack
 
 ### Running Tests
 
-\`\`\`bash
+```bash
 # Unit tests
 pnpm test
 
@@ -295,11 +294,11 @@ pnpm test:e2e
 
 # Test coverage
 pnpm test:coverage
-\`\`\`
+```
 
 ### Test Structure
 
-\`\`\`
+```
 __tests__/
 ├── components/          # Component unit tests
 ├── lib/                # Library function tests  
@@ -310,35 +309,35 @@ cypress/
 ├── e2e/               # End-to-end tests
 ├── fixtures/          # Test data
 └── support/           # Test utilities
-\`\`\`
+```
 
 ## 🚀 Deployment
 
-### Vercel Deployment (Recommended)
+### Vercel Deployment 
 
 1. **Connect Repository**: Link your GitHub repository to Vercel
 2. **Set Environment Variables**: Add all production environment variables
 3. **Deploy**: Vercel will automatically build and deploy
 
-\`\`\`bash
+```bash
 # Deploy with Vercel CLI
 vercel --prod
-\`\`\`
+```
 
 ### Docker Deployment
 
-\`\`\`bash
+```bash
 # Build and run with Docker Compose
 docker-compose up --build
 
 # Or build manually
 docker build -t mas-hub .
 docker run -p 3000:3000 mas-hub
-\`\`\`
+```
 
 ### Environment-Specific Configurations
 
-\`\`\`bash
+```bash
 # Production
 NODE_ENV=production
 MASCHAIN_NETWORK=mainnet
@@ -353,7 +352,7 @@ MASCHAIN_MOCK_MODE=false
 NODE_ENV=development
 MASCHAIN_NETWORK=testnet
 MASCHAIN_MOCK_MODE=true
-\`\`\`
+```
 
 ## 📚 API Documentation
 
@@ -361,7 +360,7 @@ MASCHAIN_MOCK_MODE=true
 
 All API requests require authentication via NextAuth.js:
 
-\`\`\`typescript
+```typescript
 // Protected API route example
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/app/api/auth/[...nextauth]/route'
@@ -375,7 +374,7 @@ export async function POST(request: Request) {
   
   // Handle authenticated request
 }
-\`\`\`
+```
 
 ### Available Endpoints
 
@@ -392,14 +391,14 @@ export async function POST(request: Request) {
 
 API endpoints are rate-limited to prevent abuse:
 
-\`\`\`typescript
+```typescript
 // Rate limiting configuration
 const rateLimiter = {
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // Limit each IP to 100 requests per windowMs
   message: 'Too many requests from this IP'
 }
-\`\`\`
+```
 
 ## 🛡️ Security Features
 
@@ -454,31 +453,31 @@ const rateLimiter = {
 ### Community
 - **GitHub Issues**: Bug reports and feature requests
 - **Discord**: Real-time community support
-- **Email**: support@mashub.com
+- **Email**: mashub.chain@gmail.com
 
 ### Troubleshooting
 
 **Common Issues:**
 
 1. **WebSocket Connection Errors**
-   \`\`\`bash
+   ```bash
    # Check Supabase URL matches between local and production
    echo $NEXT_PUBLIC_SUPABASE_URL
-   \`\`\`
+   ```
 
 2. **MasChain API Errors**
-   \`\`\`bash
+   ```bash
    # Verify API credentials
    curl -H "client_id: $MASCHAIN_CLIENT_ID" \\
         -H "client_secret: $MASCHAIN_CLIENT_SECRET" \\
         https://api.maschain.com/api/contract/projects
-   \`\`\`
+   ```
 
 3. **Database Connection Issues**
-   \`\`\`bash
+   ```bash
    # Test Supabase connection
    npx supabase status
-   \`\`\`
+   ```
 
 ## 📄 License
 
@@ -490,7 +489,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Team**: MAS Hub Development Team
 - **Category**: Enterprise Blockchain Solutions
 - **Demo**: [https://mas-hub.vercel.app](https://mas-hub.vercel.app)
-- **Presentation**: [View Slides](./docs/presentation.pdf)
 
 ---
 
