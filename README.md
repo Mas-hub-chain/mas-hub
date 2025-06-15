@@ -8,7 +8,7 @@
 
 ## 🎯 Overview
 
-MAS Hub is a comprehensive enterprise-grade platform that bridges traditional business operations with blockchain technology through MasChain integration. Our solution provides seamless smart contract lifecycle management, automated compliance checking, and real-time transaction monitoring.
+MAS Hub is a platform that bridges traditional business operations with blockchain technology through MasChain integration. Our solution provides seamless smart contract lifecycle management, automated compliance checking, and real-time transaction monitoring.
 
 ### Architecture Overview
 
