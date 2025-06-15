@@ -16,6 +16,8 @@
 
 MAS Hub is a platform that bridges traditional business operations with blockchain technology through MasChain integration. Our solution provides seamless smart contract lifecycle management, automated compliance checking, and real-time transaction monitoring.
 
+<img width="819" alt="Screenshot 2025-06-15 at 23 31 36" src="https://github.com/user-attachments/assets/f451284b-32c5-418a-8570-bc775211ba03" />
+
 ### Architecture Overview
 
 A Next.js application integrating with MasChain for enterprise-grade smart contract management, tokenization, and compliance.
