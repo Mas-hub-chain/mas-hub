@@ -348,7 +348,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **MasChain Hackathon 2025**
 - **Team**: MAS Hub Development Team
 - **Category**: Enterprise Blockchain Solutions
-- **Demo**: [https://mas-hub.vercel.app](https://mas-hub.vercel.app)
+- **Demo**: [https://www.maschainhub.com](https://www.maschainhub.com/)
 
 ---
 
